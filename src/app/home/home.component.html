@@ -1,1 +1,12 @@
-<p>home works!</p>
+<ng-template #t let-fill="fill">
+        <span class="gift" [class.full]="fill === 100">
+          <span class="half" [style.width.%]="fill">★</span>★
+        </span>
+      </ng-template>
+    
+      <ngb-rating 
+      [(rate)]="currentRate" 
+      [starTemplate]="t" 
+      [readonly]="false" 
+      max="5">
+      </ngb-rating>

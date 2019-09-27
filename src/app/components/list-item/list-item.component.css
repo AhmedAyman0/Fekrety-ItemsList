@@ -1,0 +1,42 @@
+.wrapper{
+    width: 100%;
+
+}
+.parent{
+    width:100%;
+    /* padding: 0 30%; */
+    display : flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+.detail{
+    color: #51CD89;
+    font-style: italic;
+    margin: -6% 0;
+    font-size: .8rem;
+}
+.full{
+    color: #ffa600;
+
+}
+.location{
+
+    margin-top: 8%;
+    color: #BFC5C7;
+}
+.rate{
+    color:#A2A9AF;
+}
+
+button{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    margin: 2%;
+
+}
+
+img{
+    border-radius: 100%;
+    margin: 15% 0;
+}

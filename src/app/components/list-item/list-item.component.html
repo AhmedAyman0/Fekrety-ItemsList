@@ -1,0 +1,17 @@
+
+<button mat-button >
+  <div class="parent ">
+    <div class="col-md-3 text-right">
+      <img src="http://lorempixel.com/75/75/people?{{item.id}}">
+    </div>
+    <div class="col-md-6 text-left">
+      <div class="text">{{item.full_name}}</div>
+      <div class="detail">{{item.spec}}</div>
+      <div class="location"> 
+        <fa-icon [icon]="mapMarker"></fa-icon>
+        {{item.location}}
+      </div>
+    </div>
+    <div class="col-md-3 text-left "><div class="rate"><span class="full">★</span> {{item.rate}}</div></div>
+  </div>
+</button>

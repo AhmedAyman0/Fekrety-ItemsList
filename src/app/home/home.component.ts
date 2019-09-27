@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  currentRate:any;
   constructor() { }
 
   ngOnInit() {
+    this.currentRate=3.8;
   }
 
 }
