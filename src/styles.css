@@ -1,12 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/primeng/resources/themes/nova-light/theme.css';
-/* @import '../node_modules/primeng/resources/primeng.css'; */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; padding-top: 70px; }
 body{
     background-color: #F8F8F8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
+
+
+

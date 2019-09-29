@@ -1,1 +1,38 @@
-<p>feed-back works!</p>
+<div class="text-center">
+
+            <h4>Give Feedback</h4>
+            <div class="media data">
+                    <img style="border-radius: 100%" class="mr-3" src="http://lorempixel.com/75/75/people/{{data.id}}">
+                    <div class="media-body text-left">
+                      <h5 class="mt-0">{{data.full_name}}</h5>
+                    <span class="detail"> {{data.spec}}</span>
+                    </div>
+                  </div>
+                  <div class="rate">
+                  <ng-template #t let-fill="fill">
+                        <span class="star" [class.full]="fill === 100">
+                          <span class="half" [style.width.%]="fill">★</span>★
+                        </span>
+                      </ng-template>
+                    
+                      <ngb-rating 
+                      [(rate)]="currentRate" 
+                      [starTemplate]="t" 
+                      [readonly]="false" 
+                      max="5">
+                      </ngb-rating>
+                    </div>
+                    <div class="form-group text-left">
+                      <label style="font-weight: 600" for="feedBack">Feedback</label>
+                      <textarea class="form-control" placeholder="Write Your Feedback" name="feedBack" id="feedBack" rows="3"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button (click)="rate()" class="btn btn-default send" >Send</button>
+                    </div>
+                    <div class="text-center">
+                            <button (click)="close()" class="btn btn-default cancel" >No Thanks</button>
+                        </div>
+
+</div>
+
+

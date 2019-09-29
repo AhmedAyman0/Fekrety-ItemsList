@@ -12,8 +12,9 @@
 .detail{
     color: #51CD89;
     font-style: italic;
-    margin: -6% 0;
+    margin: -4% 0;
     font-size: .8rem;
+    font-weight: 400;
 }
 .full{
     color: #ffa600;
@@ -23,6 +24,9 @@
 
     margin-top: 8%;
     color: #BFC5C7;
+    font-weight: 500;
+    font-size: medium;
+    font-weight: 400;
 }
 .rate{
     color:#A2A9AF;

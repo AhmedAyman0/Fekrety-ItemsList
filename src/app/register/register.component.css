@@ -3,3 +3,15 @@
     border-radius: 25px;
     font-size: larger;
 }
+
+.file-upload{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border: 2px dotted;
+    border-radius: 50%;
+}
+
+.upload-wrapper{
+    margin-top: 27%;
+}

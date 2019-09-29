@@ -1,0 +1,46 @@
+.data{
+  margin: 0% 10%;
+  margin-top: 20%;
+}
+.rate{
+  margin: 10% 0%;
+}
+.detail{
+  color: #51CD89;
+  font-style: italic;
+  font-weight: 500;
+
+}
+.send{
+  width: 75%;
+    background-color: #09D95F;
+    color: white;
+    border-radius: 25px;
+    margin: 2.5%;
+}
+.cancel{
+  width: 75%;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  margin: 2.5%;
+}
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    color: #d3d3d3;
+  }
+  .full {
+    color: #ffa600;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #ffa600;
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}

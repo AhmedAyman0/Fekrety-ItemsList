@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
+
 @Component({
   selector: "app-register",
   templateUrl: "./register.component.html",
@@ -14,6 +15,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
+      avatar:[""],
       fullName: ["", [Validators.required, Validators.minLength(10)]],
       birthDate: ["", Validators.required],
       email: ["", [Validators.email, Validators.required]],
@@ -28,15 +30,13 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.controls;
   }
   onSubmit() {
-    console.log(this.registerForm.invalid);
+
+    console.log(this.form.birthDate.errors);
     this.submitted = true;
     if (this.registerForm.invalid) {
       return;
     }
-    alert(
-      "SUCCESS!! :-)\n\n" + JSON.stringify(this.registerForm.value, null, 4)
-    );
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('/');
   }
   onReset() {
     this.submitted = false;

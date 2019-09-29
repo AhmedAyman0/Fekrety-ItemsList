@@ -1,0 +1,247 @@
+<!-- <div class="text-center">
+<form [formGroup]="hForm"  class="form-inline">
+  <div class="text-center">
+    <table class="table table ">
+      <tr>
+        <td>
+          <label for="name">Name</label>
+            <div class="form-group">
+                <input
+                  type="text"
+                  formControlName="name"
+                  [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                  id="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                />
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required">Name is required</div>
+                </div>
+              </div>
+        </td>
+
+          <td>
+            <label for="username">User Name</label>
+              <div class="form-group">
+              
+                  <input
+                    type="text"
+                    formControlName="username"
+                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                    id="username"
+                    class="form-control"
+                    placeholder="Your username"
+                  />
+                  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">User Name is required</div>
+                  </div>
+                </div>
+          </td>
+
+            <td>
+              <label for="email">Email</label>
+                <div class="form-group">
+              
+                    <input
+                      type="text"
+                      formControlName="email"
+                      [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                      id="email"
+                      class="form-control"
+                      placeholder="Your email"
+                    />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">User Name is required</div>
+                    </div>
+                  </div>
+            </td>
+          </tr>
+          <tr >
+            <td colspan="6">
+                <div class="text-center">
+                    <button (click)="Add()" *ngIf="!edit" [disabled]="!hForm.dirty" class="add btn btn-default">Add</button>
+                    <button *ngIf="edit" (click)="Edit()" class="add btn btn-default">Edit</button>
+                </div>
+            </td>
+          </tr>
+          <tr *ngFor="let item of users">
+            <td colspan="6">
+                <mat-list>
+                    <mat-list-item >
+                      <div class="user text-left">
+                        <div class="text">
+                          asd
+                        </div>
+                        <div class="detail">
+                asd
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-default edit" matTooltip="Edit" (click)="aEdit(user.id)">✎
+                              </button>
+                            <button class="btn btn-default delete" matTooltip="Delete" (click)="Delete(user.id)">🗑</button>
+                        </div>
+                      </div>
+                    </mat-list-item>
+                  </mat-list>
+                
+            </td>
+          </tr>
+    </table>
+  </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" >
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>
+              <button class="btn btn-default edit" matTooltip="Edit" (click)="aEdit(user.id)">✎
+                </button>
+              <button class="btn btn-default delete" matTooltip="Delete" (click)="Delete(user.id)">🗑</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+
+
+
+</div> -->
+
+  <div  class="col-md-12">
+    <mat-card>  
+    <br><br>  
+      <mat-card-content>  
+          <form [formGroup]="hForm">
+            <input type="hidden" formContolName="id" />
+            <div class="table-responsive">
+                <table class="table">
+                  <tr>
+                    <td class="tb1" >
+                      <label for="name">Name</label>
+                        <div class="form-group">
+                            <input
+                              type="text"
+                              formControlName="name"
+                              [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                              id="name"
+                              class="form-control"
+                              placeholder="Your Name"
+                            />
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                              <div *ngIf="f.name.errors.required">Name is required</div>
+                            </div>
+                          </div>
+                    </td>
+            
+                      <td>
+                        <label for="username">User Name</label>
+                          <div class="form-group">
+                          
+                              <input
+                                type="text"
+                                formControlName="username"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                                id="username"
+                                class="form-control"
+                                placeholder="Your username"
+                              />
+                              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">User Name is required</div>
+                              </div>
+                            </div>
+                      </td>
+            
+                        <td>
+                          <label for="email">Email</label>
+                            <div class="form-group">
+                          
+                                <input
+                                  type="text"
+                                  formControlName="email"
+                                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                                  id="email"
+                                  class="form-control"
+                                  placeholder="Your email"
+                                />
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                  <div *ngIf="f.email.errors.required">User Name is required</div>
+                                </div>
+                              </div>
+                        </td>
+                      </tr>
+                      <tr >
+                        <td colspan="6">
+                            <div class="text-center">
+                                <button (click)="Add()" *ngIf="!edit" [disabled]="!hForm.dirty" class="add btn btn-default">Add</button>
+                                <button *ngIf="edit" (click)="Edit()" class="add btn btn-default">Edit</button>
+                            </div>
+                        </td>
+                      </tr>
+                      <!-- <tr *ngFor="let item of users">
+                        <td colspan="6">
+                            <mat-list>
+                                <mat-list-item >
+                                  <div class="user text-left">
+                                    <div class="text">
+                                      asd
+                                    </div>
+                                    <div class="detail">
+                            asd
+                                    </div>
+                                    <div class="text-right">
+                                        <button class="btn btn-default edit" matTooltip="Edit" (click)="aEdit(user.id)">✎
+                                          </button>
+                                        <button class="btn btn-default delete" matTooltip="Delete" (click)="Delete(user.id)">🗑</button>
+                                    </div>
+                                  </div>
+                                </mat-list-item>
+                              </mat-list>
+                            
+                        </td>
+                      </tr> -->
+                </table>
+              </div>
+            </form>
+
+                     
+    <br><br>  
+    <div class="table-responsive">
+          <table class="table" >  
+              <tr class="head">  
+                <th class="tbl2">Name</th>  
+                <th class="tbl2">User Name</th>  
+                <th class="tbl2">Email</th>  
+                <th class="tbl2">Edit</th>  
+                <th class="tbl2">Delete</th>  
+
+              </tr>  
+              <tr *ngFor="let user of users">  
+                <td class="tbl2">{{user.name}}</td>  
+                <td class="tbl2">{{user.username}}</td>  
+                <td class="tbl2">{{user.email}}</td>  
+                <td class="tbl2">  
+                  <button type="button" class="btn btn-info"matTooltip="Click Edit Button"(click)="aEdit(user.id)">✎</button>  
+                </td>  
+                <td class="tbl2">  
+                  <button type="button" class="btn btn-danger"matTooltip="Click Delete Button"(click)="Delete(user.id)">🗑</button>  
+                </td>  
+              </tr>  
+      
+            </table>  
+          </div>
+      </mat-card-content>  
+    </mat-card>  
+  </div>

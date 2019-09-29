@@ -1,0 +1,41 @@
+@import '../../../../node_modules/primeng/resources/primeng.css';
+
+.add{
+  width: 66%;
+  color: white;
+  background-color: #09D95F;
+  border-radius: 25px;
+}
+
+.edit{
+  color: #09D95F;
+}
+.delete{
+  color:#ff0000;
+}
+.user{  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  border-radius: 20px;
+  
+}
+.head{
+  background-color: #09D95F;
+  color: white;
+
+}
+.head th{
+  padding-left: 4%;
+}
+.text{
+  font-weight: 600;
+}
+
+.detail{
+  font-weight: 400;
+  color: #09D95F;
+}
+
+table td{
+  padding: 4%;
+}
