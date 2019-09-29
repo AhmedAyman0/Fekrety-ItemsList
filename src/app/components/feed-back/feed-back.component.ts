@@ -20,7 +20,7 @@ export class FeedBackComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   ngOnInit() {
-    this.currentRate = this.data.rate;
+    this.currentRate = (this.data as any).rate;
   }
   rate() {
     this._snackBar.openFromComponent(SnackBarComponent, {
