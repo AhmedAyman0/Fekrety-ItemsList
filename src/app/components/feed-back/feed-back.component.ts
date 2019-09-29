@@ -14,13 +14,16 @@ export class FeedBackComponent implements OnInit {
 
   durationInSeconds:number=2;
   currentRate:number;
+  item:any;
   constructor(
     private _snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<FeedBackComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   ngOnInit() {
+    this.item = (this.data as any);
     this.currentRate = (this.data as any).rate;
+
   }
   rate() {
     this._snackBar.openFromComponent(SnackBarComponent, {
