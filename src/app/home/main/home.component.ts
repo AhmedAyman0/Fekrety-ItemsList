@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
   }
   Delete(id: number) {
     console.log(this.users,id);
-    let c = confirm("Are you sure?" + id);
+    let c = confirm("Are you sure?");
     if (c) {
       this.users
       this.users = this.users.filter(a => a.id != id );
@@ -85,11 +85,8 @@ export class HomeComponent implements OnInit {
     this.users[i].name=user.name;
     this.users[i].email=user.email;
     this.users[i].username=user.username;
-    this.hForm.setValue({
-      username:null,
-      name:null,
-      email:null,
-    })
+    this.hForm.reset();
+    this.submitted=false;
   }
   Add() {
     
@@ -101,11 +98,7 @@ export class HomeComponent implements OnInit {
     user.id = this.users.length + 1;
     console.log(user);
     this.users = [this.hForm.value, ...this.users];
-    this.hForm.setValue({
-      username:null,
-      name:null,
-      email:null,
-    })
+    this.hForm.reset();
     this.submitted=false;
   }
 }

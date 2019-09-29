@@ -40,7 +40,10 @@ export class ItemsListComponent implements OnInit,AfterContentInit  {
   openDialog(item:Item): void {
     const dialogRef = this.dialog.open(FeedBackComponent, {
       width: '400px',
-      height:'615px',
+      position:{
+        bottom:'16px',
+        
+      },
       data: item
     });
   }

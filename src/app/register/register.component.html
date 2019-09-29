@@ -17,9 +17,7 @@
           [ngClass]="{ 'is-invalid': submitted && form.fullName.errors }"
           class="form-control"
           >
-          <div *ngIf="submitted && form.birthDate.errors" class="invalid-feedback">
-            <div *ngIf="form.birthDate.errors.required">Birth Date is required</div>
-          </div>
+
         </div>
     <label for="fullName">Full Name</label>
     <input
@@ -45,7 +43,7 @@
     placeholder="dd/mm/yy"
     class="form-control"
     bsDatepicker
-    [bsConfig]="{ isAnimated: true , dateInputFormat: 'MM/DD/YYYY'   }">
+    [bsConfig]="{ isAnimated: true , dateInputFormat: 'DD/MM/YYYY'   }">
     <div *ngIf="submitted && form.birthDate.errors" class="invalid-feedback">
       <div *ngIf="form.birthDate.errors.required">Birth Date is required</div>
     </div>

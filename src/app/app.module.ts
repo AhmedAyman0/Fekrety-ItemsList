@@ -22,12 +22,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {InputTextModule} from 'primeng/inputtext';
-import { EditComponent } from './home/edit/edit.component';
-import { DeleteComponent } from './home/delete/delete.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { UserSnackBarComponent } from './components/user-snack-bar/user-snack-bar.component';
 
 
 
@@ -44,9 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     FeedBackComponent,
     ModalComponent,
     SnackBarComponent,
-    EditComponent,
-    DeleteComponent,
     FooterComponent,
+    UserSnackBarComponent,
 
   ],
   imports: [
@@ -70,7 +68,8 @@ import {MatCardModule} from '@angular/material/card';
   ],
   entryComponents: [
     SnackBarComponent,
-    FeedBackComponent
+    FeedBackComponent,
+    UserSnackBarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

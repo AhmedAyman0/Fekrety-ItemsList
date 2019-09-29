@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserSnackBarComponent } from '../components/user-snack-bar/user-snack-bar.component';
 
 
 @Component({
@@ -11,7 +13,7 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(private formBuilder: FormBuilder, private router: Router,private _snackBar: MatSnackBar,) {}
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -36,6 +38,9 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
+    this._snackBar.openFromComponent(UserSnackBarComponent,{
+      duration:2 * 1000,
+    })
     this.router.navigateByUrl('/');
   }
   onReset() {
